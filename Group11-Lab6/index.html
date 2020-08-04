@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<style>
+.navbar {
+  overflow: hidden;
+  background-color: #333; 
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color:inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: grey;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: grey;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+
+header, section, aside, footer {
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #000000;
+    color: #ffffff;
+}
+
+main {
+    background: pink;
+    flex: 1 1 400px;
+}
+
+.header {
+    background: #03a9f4;
+}
+
+.main {
+    background: #d22b1f;
+    flex: 1 1 400px;
+    
+}
+
+.navigation {
+    background: #129a22;
+    padding: 10px;
+    flex: 0 0 200px;
+}
+
+.Notes {
+    min-height:200px;
+    border: 1px solid #000000;
+    background: #673ab7;
+    flex-shrink:0;
+    align-self:flex-end;
+    order:4;
+}
+
+.footer {
+    border: 1px solid #000000;
+    background: #616161;
+}
+
+    .flex-container {
+        display: flex;
+    } 
+    .content {
+    flex: 1;
+    ...
+}
+
+.notes {
+    flex: 0 1 300px;
+    ...
+}
+
+
+</style>
+
+
+
+
+
+
+<body>
+
+
+<div class="navbar">
+   <a href="#menu">Menu</a>
+  <div class="subnav">
+    <button class="subnavbtn">Labs <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#Lab 1">lab 1</a>
+      <a href="#Lab 2">lab 2</a>
+      <a href="#Lab3">lab 3</a>
+      <a href="#Lab">lab 4</a>
+      <a href="#Lab">lab 5</a>
+      <a href="#Lab">lab 6</a>
+      <a href="#Lab">lab 7</a>
+    </div>
+    
+    
+    
+    
+    
+    
+ </div>
+  <div class="subnav">
+    <button class="subnavbtn">Projects <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#project">Project 1</a>
+      <a href="#project">Project 2</a>
+     
+    </div>
+  </div> 
+
+  <a href="#contact">Content</a>
+</div>
+
+
+
+
+<main>
+    Main
+
+    <!-- Header -->
+    <section class="header">
+        Header
+        
+        <p> This pages was built using Flexbox Layout</p>
+    </section>
+    
+    <div class="flex-container">
+
+   <!-- Content -->
+   <section class="navigation">
+     <h1>Navigation</h1>
+     
+     <li><a href="index1.html">Project 1</a></li>
+      <li><a href="index2.html">lab4</a>
+     </li>
+     
+     <ul>
+     
+     </ul>
+   </section>
+
+   <!-- Sidebar -->
+   <aside class="Notes">
+      <h1>Notes</h1> 
+      <p>Semester is goint to complete. Only one Lab and 1 Project is left and one 10% exam is also left.</p>
+   </aside>
+
+</div>
+
+
+    <!-- Main-->
+    
+    
+    <section class="main">
+    Main (Web Design Development Labs)
+    <p>
+       In this Web Design Development Labs, at starting we learned regarding working on Github. Like we learned how to remove, add, delete and merge files and working on branches. Along with this we also learned how to commit. After this we learned how to create web pages in html using html coding. we did basic programming in Javascript. <br>As we solved programming question on codewar by creating account on it on the tags which are Arrays
+<br>Basic Language Features
+<br>Control Flow
+<br>Functions
+<br>Fundamentals
+<br>Lists
+<br>Logic
+<br>Loops
+<br>Stings
+<br>Thereafter, we were required to do basic domination on javascript. In addition to this, we learned about CSS Floating and Positioning.
+<br> In the First Project we learned about HTML Form Validation.
+<br> In the forthcoming labs we will learn about  CSS Flex box Layout and  Grid Layout.
+<br> Also, in coming Project, we will learn about HTML Graphics.
+    </p>
+</section>
+
+   
+    
+    <!-- Footer -->
+    <section class="footer">
+        <center>w3 website used for help.</center>
+    </section>
+
+</main>
+
+
+
+</body>
+</html>
+

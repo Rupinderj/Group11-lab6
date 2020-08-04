@@ -1,0 +1,124 @@
+<html>
+    <head>
+
+  <h2><a href="index Page.html"><i>Index Page</i></a></h2>
+     
+    </head>
+    <body onload="refresh_table()">
+    
+    <script>
+
+        var data =[
+            { image: "images/img1.jpg", fname: "Mandy", lname: "Thakur", job: "Computer and Information System Manager", salary:"7000" },
+            { image: "images/img2.png", fname: "Mohit", lname: "Kumar", job: "Sales Manager", salary:"6700"  },
+            { image: "images/img3.jpg", fname: "Raman", lname: "Deep", job: "Medical and Health Services Manager	", salary:"6500"  },
+            { image: "images/img4.jpg", fname: "Nick", lname: "Jonas", job: "Dentist", salary:"600"  }
+        ];
+        
+        
+        function create_row(i,f,l,j,s,index){
+            var row = ""
+            row += "<tr class='w1' id='" + index + "'>\n"
+            row += "<td onclick='remove_person(" + index + ")'>❌ Remove</td>\n"
+            row += "<td>" + "<img src='" + i + "' height=100px width=100px>" + "</td>\n"
+            row += "<td>" + f + "</td>\n"
+            row += "<td>" + l + "</td>\n"
+            row += "<td>" + j + "</td>\n"
+            row += "<td>" + s + "</td>\n"
+            row += "</tr>"
+            return row
+        } 
+
+        function refresh_table(){
+            var code_snippet =""
+            for(var index in data)
+                code_snippet += create_row(data[index].image,data[index].fname,data[index].lname,data[index].job,data[index].salary, index)
+
+            var table = document.querySelector('#my_table')
+            table.innerHTML = code_snippet
+        }
+
+        function remove_person(index){
+            data.splice(index, 1)
+            refresh_table()
+        }
+
+        function onEnterUp(event){
+            if(event.code !== 'Enter') return;
+            var im= document.getElementById("img")
+            var fn = document.getElementById("fName")
+            var ln = document.getElementById("lName")
+            var jobs = document.getElementById("job")
+            var sal = document.getElementById("slry")
+            var element={};
+            element.image=im.value;
+            element.fname=fn.value;
+            element.lname=ln.value;
+            element.job=jobs.value;
+            element.salary=sal.value;
+
+            data.push(element);
+            im.value = ""
+            fn.value = ""
+            ln.value = ""
+            jobs.value = ""
+            sal.value = ""
+            refresh_table()
+        }
+
+    </script>
+    
+    <table>
+        <h1>Dynamic Table</h1>
+        <thead>
+            <th></th>
+            <th>Photo</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Job</th>
+            <th>Salary($)</th>
+        </thead>
+        <tbody id='my_table'></tbody>
+        <tfoot>
+            <tr onkeyup="onEnterUp(event)">
+                <td></td>
+                <td><input name="img" id="img" type="text"></td>
+                <td><input name="fName" id="fName" type="text"></td>
+                <td><input name="lName" id="lName" type="text"></td>
+                <td><input name="job" id="job" type="text"></td>
+                <td><input name="slry" id="slry" type="text"></td>
+           </tr>
+        </tfoot>
+    </table>
+
+    </body>
+<style>
+
+
+{
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+body{
+background-color: #FAF0E6;
+}
+
+ td,  th {
+  border: 1px solid black;
+  padding: 9px;
+}
+
+ tr:nth-child(even){background-color: #FFFFE0;}
+
+ tr:hover {background-color:  #FAEBD7;}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: middle;
+  background-color:#FA8072;
+  color: dark purple;
+}
+</html>

@@ -1,0 +1,28 @@
+<style>
+
+h1{
+color:blue;}
+h2 {color: #8A2BE2;}
+
+p    {color: dark black;
+  
+  width: 500px;
+  border: 1px solid black;
+}
+a:hover{color:#FF00FF;}
+
+
+p, li {
+  font-size: 15px;    
+  line-height: 2;
+  letter-spacing: 1px;
+}
+body{
+width: 600px;
+  margin: 0 auto;
+background-color: #FAF0E6;
+padding: 0 20px 20px 20px;
+ border: 5px solid black;
+
+}
+</style>
